@@ -230,3 +230,8 @@ input{
     border-radius: 20px;
     justify-self: center;
 }
+
+.report-text{
+    padding: 1em 5em;
+    font-size: 1.5em;
+}

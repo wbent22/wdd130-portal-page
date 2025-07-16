@@ -7,17 +7,7 @@
     <title>Wyatt's Portal Page</title>
 </head>
 <body>
-    <header>
-        <a href="index.html">
-            <img src="images/WB_Logo.png" alt="WB logo" id="logo">
-        </a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="index.html#wwr">WWR</a>
-            <a href="index.html#ice">ICE</a>
-            <a href="aboutme.html">About Me</a>
-        </nav>
-    </header>
+    <div id="header"></div>
     <div class="title-pic">
         <div class="myname">
         <h1>Wyatt Bentley</h1>
@@ -74,28 +64,24 @@
             <a href="ice/signup/signup.html" class="picture-link" target="_blank"><img src="images/signup.png" alt="Signup Page screenshot"></a>
         </section>
     </main>
-    <footer>
-        <div class="socials">
-            <a href="https://www.facebook.com/wyatt.bentley.961/" target="_blank"><img src="images/icons8-facebook-48.png" alt="facebook logo"></a>
-            <a href="https://www.instagram.com/wyattb1204/" target="_blank"><img src="images/icons8-instagram-48.png" alt="instagram logo"></a>
-            <a href="https://www.linkedin.com/in/wyatt-bentley/" target="_blank"><img src="images/icons8-linkedin-48.png" alt="linkedIn logo"></a>
-            <a href="https://github.com/wbent22" target="_blank"><img src="images/github.svg" alt="github logo" style="width: 40px;"></a>
-        </div>
-        <form action="">
-            <legend>Contact Me</legend>
-          <label for="name">Name</label>
-          <input id="name" type="text">
-          <br>
-          <label for="email">Email</label>
-          <input id="email" type="email">
-          <br>
-          <label for="message">Message</label>
-          <textarea name="message" id="message"></textarea>
-          <br>
-          <button type="button" name="submit" id="submit">Submit</button>
-        </form>
-        <p class="copyright">&copy; 2025 Wyatt Bentley</p>
-    </footer>
+    <div id="footer"></div>
     
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("footer").innerHTML = data;
+                });
+
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header").innerHTML = data;
+                });
+        })
+    </script>
+
+
 </body>
 </html>
